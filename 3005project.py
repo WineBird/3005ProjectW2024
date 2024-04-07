@@ -1104,6 +1104,8 @@ def memberSearch():
         for entry in rows:
             print("User "+str(i)+":")
             displayProfile(entry[1],UserType.Member.value)
+            print("\n")
+            i += 1
     else:
         print("No matching members.")
     return
@@ -1322,7 +1324,7 @@ def createGroupClass():
     print("Class created!")
     return
 
-def editGroupClass(classID):
+def editGroupClass():
     global currentUsername
     global currentUserType
     cur = db.cursor()
@@ -1372,9 +1374,8 @@ def editGroupClass(classID):
     if (trainerUsername not in trainerArray):
         print("That's not a valid trainer")
         return
-
     try:
-        cur.execute("update GroupSession set SessionDate = %s and set tUname = %s where gSID = %s",(date,trainerUsername,classID))
+        cur.execute("update GroupSession set SessionDate = %s, tUname = %s where gSID = %s",(date,trainerUsername,classID))
     except:
         print("Update failed")
         db.rollback()
