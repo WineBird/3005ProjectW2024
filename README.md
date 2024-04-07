@@ -4,7 +4,7 @@ An application written in Python using psycopg3 which interacts with a PostgreSQ
 
 ### Demo Video
 
-The demo video is here. (I'M RECORDING RIGHT NOW!)
+The demo video is [here](https://drive.google.com/file/d/1btXybV1BiewtQvXosKnS614X5fgdxpBW/view?usp=sharing).
 
 ### Files
 
